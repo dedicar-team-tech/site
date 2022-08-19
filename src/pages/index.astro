@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Service from "../components/Service.astro";
+import Differential from "../components/Differential.astro";
+import About from "../components/About.astro";
+import Partnerships from "../components/Partnerships.astro";
+import Contact from "../components/Contact.astro";
+import Depositions from "../components/Depositions.astro";
+---
+
+<Layout title="Dedicar Equipe - Apoio e Assistência a Pacientes">
+	<div id="container-vanta" class="container-vanta font-mono"></div>
+	<div class="container-default">
+		<div class="mb-4 lg:px-0">
+			<div id="container-index" class="relative">
+				<Navbar />
+				<Hero />
+				<Service />
+				<Differential />
+				<About />
+				<Depositions />
+				<Partnerships />
+				<Contact />
+			</div>
+		</div>
+	</div>
+</Layout>
+<script is:inline src="/js/three.min.js"></script>
+<script is:inline src="/js/vanta.dots.min.js"></script>
+<script is:inline>
+	let vantaContainer = document.querySelector("#container-vanta");
+	vantaContainer.style.height = `${window.innerHeight}px`;
+	window.addEventListener("resize", (e) => {
+		vantaContainer.style.height = `${window.innerHeight}px`;
+	});
+	document.addEventListener("DOMContentLoaded", (e) => {
+		console.log(e);
+		const effect = VANTA.DOTS({
+			el: "#container-vanta",
+			mouseControls: true,
+			touchControls: true,
+			gyroControls: false,
+			minHeight: 200.0,
+			minWidth: 200.0,
+			scale: 1.0,
+			scaleMobile: 1.0,
+			color: 0x64d9f7,
+			color2: 0x3b3e99,
+			backgroundColor: 0x3b3e99,
+			size: 3.5,
+		});
+	});
+</script>
+<style is:global>
+	#container-index:nth-child(n + 1) {
+		@apply flex flex-col;
+	}
+</style>

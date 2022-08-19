@@ -1,0 +1,79 @@
+---
+import Whatsapp from '@mdi/svg/svg/whatsapp.svg'
+import Facebook from '@mdi/svg/svg/facebook.svg'
+import Instagram from '@mdi/svg/svg/instagram.svg'
+---
+
+<div
+    id="início"
+    class="flex flex-col gap-2 md:gap-6 justify-center sm:justify-center items-center content-center"
+>
+    <div
+        class="flex flex-col-reverse px-3 ml:px-6 gap-0.5 sm:px-0 sm:h-min sm:grid sm:grid-cols-2 sm:gap-8"
+    >
+        <div class="flex flex-col gap-2 sm:gap-4 h-min">
+            <h1
+                class="bg-[#3B3E99] text-center leading-tight font-semibold tracking-wide text-base ms:text-lg mm:text-xl ml:text-2xl sm:text-left md:text-5xl lg:text-6xl xl:text-7xl"
+            >
+                Uma equipe de acompanhantes ao seu alcance.
+            </h1>
+            <p
+                class="bg-[#3B3E99] text-left ml:text-center leading-tight sm:text-left lg:text-lg"
+            >
+                há mais de 20 anos disponibilizando serviços de forma humanizada
+                e personalizada em todo Rio de Janeiro.
+            </p>
+            <div
+                style="background:#3B3E99"
+                class="text-white flex flex-col gap-0.5 shadow drop-shadow font-semibold tracking-wide w-full text-center text-sm p-2 border border-[#64D9F7] rounded-lg"
+            >
+                <div class="flex flex-row gap-2 justify-center">
+                    <span class="hidden lg:block whitespace-nowrap"
+                        >(21) 3540-2249</span
+                    >
+                    <span class="hidden lg:block">|</span>
+                    <span class="hidden lg:block whitespace-nowrap"
+                        >(21) 3101-2541</span
+                    >
+                    <span class="hidden lg:block w-min">|</span>
+                    <span class="whitespace-nowrap"
+                        ><img src={Whatsapp} alt="ícone whatsapp" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;(21) 9 9582-5518</span
+                    >
+                </div>
+                <div class="flex flex-row gap-2 justify-center">
+                    <a
+                        href="https://www.instagram.com/equipededicar/"
+                        target="_blank"
+                        class="whitespace-nowrap"
+                        ><img src={Instagram} alt="ícone instagram" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;@equipededicar</a
+                    >
+                    <span class="w-min">|</span>
+                    <a
+                        href="https://www.facebook.com/Dedicar-Equipe-116445227709103"
+                        target="_blank"
+                        class="whitespace-nowrap"
+                        ><img src={Facebook} alt="ícone facebook" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;página</a
+                    >
+                </div>
+            </div>
+        </div>
+        <div
+            class="relative h-auto rounded-lg bg-white shadow drop-shadow"
+            style="background-image: url('media/page/hero/hospital.webp'); background-repeat: no-repeat; background-position: center bottom; background-size: 100%;"
+        >
+            <img
+                class="sm:absolute sm:bottom-0 pt-12 block rounded-lg w-auto h-min rounded-lg"
+                src="media/page/hero/equipe_de_cuidadores.webp"
+                alt="equipe de cuidadores"
+                loading="lazy"
+            />
+        </div>
+    </div>
+    <script is:inline>
+        let div = document.querySelector("#início")
+        div.style.height = `${window.innerHeight}px`
+        window.addEventListener("resize", (e) => {
+            div.style.height = `${window.innerHeight}px`
+        })
+    </script>
+</div>

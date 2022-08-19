@@ -1,0 +1,29 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^1.0.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vue": "^1.0.0",
+    "astro": "^1.0.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.0.96",
+    "@mdi/svg": "^7.0.96",
+    "react-div-100vh": "^0.7.0",
+    "vanta": "^0.5.22",
+    "vue-100vh": "^0.1.1"
+  }
+}

@@ -1,0 +1,43 @@
+---
+export interface Props {
+    photo: string;
+    name: string;
+    occupation: string;
+    text: string;
+}
+const { photo, name, occupation, text } = Astro.props;
+---
+
+<div
+    style="-webkit-column-break-inside: avoid;
+page-break-inside: avoid;
+break-inside: avoid;"
+    class="w-full mb-2 p-3 bg-[#24265C] rounded-lg"
+>
+    <div class="flex">
+        <div>
+            {
+                photo && (
+                    <img
+                        src={photo}
+                        class="w-[45.5px] bg-[#3B3E99] rounded mr-2"
+                        alt={name}
+                        loading="lazy"
+                    />
+                )
+            }
+        </div>
+        <div class="flex flex-col">
+            <p class="text-xl font-semibold leading-tight tracking-wider">
+                {name}
+            </p>
+            <p v-if="deposition.occupation" class="text-sm leading-tight mb-2">
+                {occupation}
+            </p>
+            <p v-else class="text-sm leading-tight mb-2">&nbsp;</p>
+        </div>
+    </div>
+    <p class="leading-snug">
+        {text}
+    </p>
+</div>

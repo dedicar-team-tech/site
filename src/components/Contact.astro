@@ -1,0 +1,68 @@
+---
+import Phone from '@mdi/svg/svg/phone.svg'
+import Whatsapp from '@mdi/svg/svg/whatsapp.svg'
+import At from '@mdi/svg/svg/at.svg'
+import Facebook from '@mdi/svg/svg/facebook.svg'
+import Instagram from '@mdi/svg/svg/instagram.svg'
+
+const menu = [
+    "serviço",
+    "diferencial",
+    "sobre",
+    "depoimentos",
+    "parceiros",
+    "contato",
+];
+---
+
+<div id="contato" class="grid grid-cols-1 md:grid-cols-3 gap-4 p-1 bg-[#3B3E99] rounded">
+    <div class="flex flex-col gap-2 leading-snug">
+        <div class="text-[#64D9F7] text-2xl">Contato</div>
+        <div>
+            <p><img src="" alt=""><img src={Phone} alt="ícone telefone" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;Telefone</p>
+            <p>(21) 3540-2249</p>
+            <p>(21) 3101-2541</p>
+        </div>
+        <div>
+            <p><img src={Whatsapp} alt="ícone whatsapp" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;Whatsapp</p>
+            <p>(21) 99582-5518</p>
+        </div>
+        <div>
+            <p><img src={At} alt="ícone email" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;Email</p>
+            <p>claudete@equipededicar.com</p>
+        </div>
+    </div>
+    <div class="flex flex-col gap-2 leading-snug">
+        <div class="text-[#64D9F7] text-2xl">Redes sociais</div>
+        <a
+            href="https://www.facebook.com/Dedicar-Equipe-116445227709103"
+            ><img src={Facebook} alt="ícone facebook" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;Facebook</a
+        >
+        <a
+            href="https://www.instagram.com/equipededicar/"
+            target="_blank"
+            ><img src={Instagram} alt="ícone instagram" style="filter: brightness(0) invert(1);" class="w-[16px] inline">&nbsp;Instagram</a
+        >
+    </div>
+    <div class="flex flex-col gap-2 leading-snug">
+        <div class="text-[#64D9F7] text-2xl">Mapa do site</div>
+        <div class="flex flex-col gap-1">
+            {
+                menu.map((item) => {
+                    return <a href={`#${item}`} target="_self" class="w-min" onclick={`document.getElementById(${item}).scrollIntoView()`}>{item}</a>;
+                })
+            }
+        </div>
+    </div>
+    <a
+        href="https://github.com/cjfswd"
+        target="_blank"
+        class="flex flex-col gap-1 sm:flex-row text-[#64D9F7] whitespace-normal col-span-1 md:col-span-3 text-xs font-thin tracking-wider rounded-lg text-center"
+    >
+        <span>Site desenvolvido por Antonio Castillo</span>
+        <span>-</span>
+        <span>[fullstack web developer]</span>
+        <span>-</span>
+        <span>(21) 9 7606-7823</span>
+    </a>
+</div>
